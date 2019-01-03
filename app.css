@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+  background: #ffffff url('../img/geometry2.png'); Background pattern from Subtle Patterns */
+  background: #EBEBD3;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 10px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+ .deck {
+   width: 275px;
+   background: linear-gradient(to right, #ffb75e, #ed8f03);
+   padding: 5px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 275px;
+ }
+
+ .deck .card {
+     align-items: center;
+     background: #2e3d49;
+     border-radius: 5px;
+     color: #ffffff;
+     cursor: pointer;
+     display: flex;
+     font-size: 0;
+     height: 55px;
+     justify-content: center;
+     width: 55px;
+ }
+
+
+
+.deck .card.open {
+    background: #02b3e4;
+    cursor: default;
+    transform: rotateY(0);
+}
+
+.deck .card.show {
+    font-size: 20px;
+}
+
+.deck .card.match {
+    background: #02ccba;
+    cursor: default;
+    font-size: 20px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    float:left;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.score-panel .stars {
+    display: inline-block;
+    margin: 0;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+.score-panel .stars li {
+    display: inline-block;
+    list-style: none;
+}
+
+.score-panel .restart {
+    cursor: pointer;
+    float: right;
+    padding-left: 20px;
+
+}
+
+/*modal*/
+
+.modal_background {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: rgba(0,0,0,0.438);
+    z-index: 2;
+    z-index: 1001;
+}
+
+
+.hide{
+    display: none;
+}
+
+.modal_body {
+    position:relative;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    transform: translate(-50%, -70%);
+}
+
+.modal_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid gray;
+}
+
+.modal_close {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.modal_stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom:1px solid gray;
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.modal_button {
+    width: 30px;
+    height: 20px;
+}
